@@ -1,18 +1,30 @@
 <template>
   <div class="card">
-    <router-link tag="a"
-                 :to="`/roles/${role.id}`"
-                 class="read-more">
-      <div class="featured-role-image m-b-1">
-        <img src="../../assets/img/single-role.jpeg"
-             alt="role image">
-        <div class="mask"></div>
-      </div>
+<!--    <router-link tag="a"-->
+<!--                 :to="`/roles/${role.id}`"-->
+<!--                 class="read-more">-->
+<!--      <div class="featured-role-image m-b-1">-->
+<!--        <img src="../../assets/img/single-role.jpeg"-->
+<!--             alt="role image">-->
+<!--        <div class="mask"></div>-->
+<!--      </div>-->
       <div class="card-body">
-        <h5 class="card-title m-b-1">{{ role.title && role.title }}</h5>
-        <p class="card-text">{{ role.body && role.body }}</p>
+        <h3 class="card-title m-b-3">
+          {{ role.name && role.name }}
+        </h3>
+        <p class="m-b-2">Administrator Role</p>
+        <p class="card-text">
+          {{ role.description && role.description }}
+        </p>
+        <div v-if="role.users.length" class="users-list d-flex">
+          <div v-for="(user, index) in role.users" :key="index">
+                  <img :src="user.photo_url"
+                       alt="user image">
+          </div>
+        </div>
       </div>
-    </router-link>
+      <div class="card-footer"></div>
+<!--    </router-link>-->
   </div>
 </template>
 <script>
@@ -27,6 +39,8 @@ export default {
 @import "../../assets/scss/base/colors";
 
 .card {
+  padding: 30px 15px;
+  border: 2px solid #EBEBEB;
   & .read-more {
     text-decoration: none;
   }
@@ -71,6 +85,20 @@ export default {
       line-height: 22px;
       text-transform: capitalize;
       color: $dark;
+    }
+
+    & .users-list {
+      margin-top: 20px;
+      & div {
+        width: 30px;
+        margin-right: 10px;
+        overflow: hidden;
+        border-radius: 50%;
+        & img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
     }
 
     & .card-text {

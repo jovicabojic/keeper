@@ -7,7 +7,7 @@
       <div class="column-row">
         <div v-for="(role, index) in userRoles"
              :key="`${index}-${role.id}`"
-             class="column-3">
+             class="column-4">
           <div class="card-wrapper">
             <SingleRole :role="role"/>
           </div>
@@ -57,12 +57,10 @@ export default {
 
 .roles-list-section {
   .column-row {
-    & .column-3 {
+    & .column-4 {
       margin-bottom: 20px;
 
       & .card-wrapper {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
-        border-radius: 5px;
         overflow: hidden;
         height: 100%;
 
@@ -77,11 +75,6 @@ export default {
           border-radius: 5px;
           font-size: 15px;
         }
-      }
-
-      &:nth-child(5n + 1) {
-        flex: 0 0 50%;
-        max-width: 50%;
       }
     }
   }

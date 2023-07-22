@@ -4,7 +4,7 @@
       <div class="column-row">
         <div class="column-12">
           <div class="footer-copyright text-center">
-            © 2022 Copyright: <a href="mailto:bojic.jovica@hotmail.com"> bojic.jovica@hotmail.com</a>
+            © 2023 Copyright: <a href="mailto:bojic.jovica@hotmail.com"> bojic.jovica@hotmail.com</a>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@ export default {
 @import "../../assets/scss/base/colors";
 
 footer {
-  background: $black;
+  background: #2c3e50;
   color: $white;
   height: 50px;
   box-sizing: border-box;

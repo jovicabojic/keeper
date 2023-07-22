@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper-fullwidth">
+  <section class="wrapper">
     <div class="column-row">
       <div class="column-12">
         <ActionsSection/>

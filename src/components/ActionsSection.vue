@@ -1,7 +1,7 @@
 <template>
   <section class="search-section d-flex justify-content-center align-items-center">
     <div class="wrapper">
-      <div class="column-row">
+      <div class="column-row justify-content-center">
         <div class="column-12 d-flex justify-content-between align-items-center">
           <SearchBar/>
           <FilterDropdown />
@@ -27,7 +27,7 @@ export default {
 @import "../assets/scss/base/colors";
 
 .search-section {
-  min-height: 300px;
+  min-height: 200px;
 
   & h2 {
     color: $white;

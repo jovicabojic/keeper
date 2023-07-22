@@ -16,6 +16,7 @@ body {
   font-stretch: normal;
   line-height: 1.71;
   letter-spacing: normal;
+  background: #F8F8F8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,4 +55,8 @@ h5 {
 h6 {
   font-size: 18px;
   line-height: 1.33;
+}
+
+p {
+  color: #2c3e50;
 }

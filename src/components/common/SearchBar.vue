@@ -56,13 +56,14 @@ export default {
       position: relative;
 
       .input-field {
-        background: $light;
-        border-radius: 25px;
+        background: transparent;
+        border-width: 0 0 2px 0;
+        border-style: solid;
+        border-bottom-color: #85C7D2;
         color: $dark;
-        width: 100%;
+        width: 250px;
         box-sizing: border-box;
         font-size: 14px;
-        border: none;
         padding: 5px 10px;
         height: 36px;
 
