@@ -3,15 +3,16 @@
     <div class="wrapper">
       <template v-if="role">
         <div class="column-row">
-          <div class="column-4">
-            <img src="../assets/img/single-role.jpeg"
-                 class="rounded-circle w-100"
-                 alt="Role image"/>
-          </div>
-          <div class="column-8">
+          <div class="column-12">
             <article>
-              <h3 class="m-b-1">{{ role.title }}</h3>
-              <p>{{ role.body }}</p>
+              <h3 class="m-b-1">{{ role.name }}</h3>
+              <p>{{ role.description }}</p>
+              <div v-if="role.users.length" class="users-list d-flex">
+                <div v-for="(user, index) in role.users" :key="index">
+                  <img :src="user.photo_url"
+                       alt="user image">
+                </div>
+              </div>
             </article>
           </div>
         </div>
@@ -50,6 +51,19 @@ article {
   & h3 {
     text-transform: capitalize;
     font-weight: 500;
+  }
+  & .users-list {
+    margin-top: 20px;
+    & div {
+      width: 30px;
+      margin-right: 10px;
+      overflow: hidden;
+      border-radius: 50%;
+      & img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
   }
 }
 </style>
