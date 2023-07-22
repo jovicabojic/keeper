@@ -5,6 +5,7 @@
         <div class="column-12 d-flex justify-content-between align-items-center">
           <SearchBar/>
           <FilterDropdown />
+          <button class="btn-primary">Create new role</button>
         </div>
       </div>
     </div>
@@ -32,6 +33,15 @@ export default {
   & h2 {
     color: $white;
     font-weight: 500;
+  }
+
+  .btn-primary {
+    background: $primary;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 25px;
+    border: none;
   }
 
 }

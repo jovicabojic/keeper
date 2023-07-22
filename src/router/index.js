@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/roles/:id',
     name: 'SingleRolePage',
-    component: () => import(/* webpackChunkName: "post" */ '../pages/SingleRolePage.vue')
+    component: () => import(/* webpackChunkName: "role" */ '../pages/SingleRolePage.vue')
   }
 ]
 
